@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/senarai_homestay.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="menu-bar">
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="home.php">Home</a></li>
+            <li><i class="fa-solid fa-house-heart"></i><a href="#">Senarai Homestay</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="tambah_homestay.php">Tambah Homestay</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li><i class="fa-solid fa-users"></i><a href="#">Klien</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="klien_senarai.php">Senarai Klien</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="klien_insert.php">Tambah Klien</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li><i class="fa-solid fa-folders"></i><a href="#">Sewaan</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="sewaan_senarai.php">Senarai Sewaan</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="sewaan_insert.php">Tambah Sewaan</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="active"><i class="fa-regular fa-file-chart-pie"></i><a href="#">Import Fail</a>
+                <div class="sub-menu-1">
+                    <ul>
+                        <li><a href="laporan_pilihan.php">Laporan</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="logout.php">Logout</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <center>
+        <h3 class="import">IMPORT DATA</h3>
+<form action="import.php" method="post" enctype = "multipart/form-data" class="import">
+    <table>
+       <tr>
+        <td>Jadual</td>
+        <td>
+        <select name="nametable">
+            <option>homestay</option>
+            <option>klien</option>
+        </select>
+        </td>
+      </tr>
+      <tr>
+         <td>Nama fail</td>
+          <td><input type="file" name="namafail" accept=".csv,.txt"></td>
+      </tr>
+    </table>
+    <button class="import" type="submit">Import</button>
+</form>
+    </center>
